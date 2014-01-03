@@ -122,6 +122,7 @@
 		20BE60B8178C22E90098188F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 20BE60B7178C22E90098188F /* AppDelegate.m */; };
 		20BE60BB178C22E90098188F /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20BE60BA178C22E90098188F /* RootViewController.m */; };
 		20BE60BE178C22E90098188F /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 20BE60BD178C22E90098188F /* HelloWorldLayer.m */; };
+		20BE60C6178C2A8D0098188F /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20BE60C5178C2A8D0098188F /* CoreAudio.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -360,6 +361,7 @@
 		20BE60BC178C22E90098188F /* HelloWorldLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelloWorldLayer.h; sourceTree = "<group>"; };
 		20BE60BD178C22E90098188F /* HelloWorldLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldLayer.m; sourceTree = "<group>"; };
 		20BE60BF178C22E90098188F /* GameConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameConfig.h; sourceTree = "<group>"; };
+		20BE60C5178C2A8D0098188F /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -367,11 +369,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20BE5F5D178C22E70098188F /* AVFoundation.framework in Frameworks */,
+				20BE60C6178C2A8D0098188F /* CoreAudio.framework in Frameworks */,
 				20BE5F55178C22E70098188F /* QuartzCore.framework in Frameworks */,
 				20BE5F57178C22E70098188F /* OpenGLES.framework in Frameworks */,
 				20BE5F59178C22E70098188F /* OpenAL.framework in Frameworks */,
 				20BE5F5B178C22E70098188F /* AudioToolbox.framework in Frameworks */,
-				20BE5F5D178C22E70098188F /* AVFoundation.framework in Frameworks */,
 				20BE5F5F178C22E70098188F /* UIKit.framework in Frameworks */,
 				20BE5F61178C22E70098188F /* Foundation.framework in Frameworks */,
 				20BE5F63178C22E70098188F /* CoreGraphics.framework in Frameworks */,
@@ -384,6 +387,7 @@
 		20BE5F48178C22E70098188F = {
 			isa = PBXGroup;
 			children = (
+				20BE60C5178C2A8D0098188F /* CoreAudio.framework */,
 				20BE5F64178C22E70098188F /* Record */,
 				20BE5F53178C22E70098188F /* Frameworks */,
 				20BE5F52178C22E70098188F /* Products */,
@@ -977,8 +981,10 @@
 				GCC_PREFIX_HEADER = Record/Prefix.pch;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				INFOPLIST_FILE = Record/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_LDFLAGS = "-lz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -992,8 +998,10 @@
 				GCC_PREFIX_HEADER = Record/Prefix.pch;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				INFOPLIST_FILE = Record/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_LDFLAGS = "-lz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};
@@ -1018,6 +1026,7 @@
 				20BE60C4178C22E90098188F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

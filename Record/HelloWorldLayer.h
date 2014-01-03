@@ -9,13 +9,26 @@
 
 // When you import this file, you import all the cocos2d classes
 #import "cocos2d.h"
-
-// HelloWorldLayer
-@interface HelloWorldLayer : CCLayer
+#import <AVFoundation/AVFoundation.h>
+#import "CocosDenshion.h"
+#import <CoreAudio/CoreAudioTypes.h>
+@interface HelloWorldLayer : CCLayer<AVAudioRecorderDelegate>
 {
+    AVAudioPlayer *player;
+	AVAudioRecorder *recorder;
+	AVAudioSession *audioSession;
+	NSString *destinationString;
+
+
 }
 
 // returns a CCScene that contains the HelloWorldLayer as the only child
 +(CCScene *) scene;
+-(void) startRecord;
+-(void) stopRecord;
+-(void) playRecord;
+-(void) initRecord;
+-(void) checkMic;
 
+- (NSString*) documentsPath;
 @end
